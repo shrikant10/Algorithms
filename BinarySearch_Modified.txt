@@ -1,0 +1,21 @@
+// Binary Search
+// Returns index of element if it is present
+// Returns index of it's previous element if it is not present.
+// Return a[l] if you want element greater than req element.
+
+int binarySearch(int a[], int l, int r, int x) 
+{ 
+    int m;
+	while (l <= r) 
+	{ 
+		m = l + (r-l)/2; 
+		if (a[m] == x) 
+			return arr[m]; 
+		if (a[m] < x) 
+			l = m + 1; 
+		else
+			r = m - 1; 
+	} 
+	return a[r];  
+}
+
